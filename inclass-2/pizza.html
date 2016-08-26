@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <titl>Pizza Order</titl>
+    </head>
+
+    <body>
+    <form id="pizza">
+        <p>Name <br> <input type="text" name="name" required></p>
+        <p>Address: #### Street Name...  <br> <input type="text" name="address" pattern="[0-9]+ [A-Za-z]+"
+                                                     title="Address should be street number followed by one empty space followed by street name."></p>
+        <p>Phone Number: 123-123-1234 <br> <input type="text" name="phone" pattern="\d{3}-\d{3}-\d{4}"
+                                                  title="Phone number should be format of 123-123-1234"></p>
+        <p>Pizza Size <br>
+                      <input type="radio" name="size" value="Large">Large
+                      <input type="radio" name="size" value="Medium">Medium                
+                      <input type="radio" name="size" value="Small">Small
+        </p>
+        <p>Pizza Toppings <br>  
+                            <input type="checkbox" name="toppings" value="Sausage">Sausage
+                            <input type="checkbox" name="toppings" value="Olives">Olives
+                            <input type="checkbox" name="toppings" value="Onion">Onion
+        </p>
+        <button type="submit" onclick="return validateForm(this.parent)">Place Order</button>
+        <button type="reset">Clear</button>
+    </form>
+    </body>
+    
+    <script>
+        function validateForm(form) {
+            if (!form) {
+                // find the right form
+                form = document.getElementById("pizza")
+            }
+            
+            // validate selected size
+            var selectedSize = form.size.value;
+            if (selectedSize === "Large" || selectedSize === "Medium" || selectedSize === "Small") {
+                return true;
+            }
+            else {
+                alert("Please select one pizza size!")
+                return false;
+            }
+        }
+    </script>
+</html>
