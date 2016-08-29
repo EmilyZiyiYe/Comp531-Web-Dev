@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="author" content="Xiangjin Zou">
+    </head>
+    
+    <body onload="setPageLoadTime()">
+        <h1>User Registration</h1>
+        <form id="regForm" method="GET" action="formProcessor.html">
+            <p>Account Name <br /> 
+                <input type="text" id="actName" name="actName" pattern="[A-Za-z]+[A-Za-z0-9]*" 
+                       title="Account name can only be upper or lower case letters and numbers, but may not start with a number" required>
+            </p>
+            <p>Display Name (optional) <br /> 
+                <input type="text" id="dispName" name="dispName">
+            </p>
+            <p>Email Address <br /> 
+                <input type="email" id="email" name="email" required>
+            </p>
+            <p>Phone Number <br /> 
+                <input type="text" id="phone" name="phone" pattern="\d{3}-\d{3}-\d{4}"
+                       title="Phone number should be format of 123-123-1234" required>
+            </p>
+            <p>Date of Birth <br /> 
+                <input type="date" id="bday" name="bday"  required>
+            </p>
+            <p>Zipcode <br /> 
+                <input type="text" id="zipcode" name="zipcode"  pattern="\d{5}"
+                       title="US zipcode should be exactly 5 digits." required>
+            </p>
+            <p>Password <br /> 
+                <input type="password" id="pwd" name="pwd" required>
+            </p>
+            <p>Password Confirmation <br> 
+                <input type="password" id="pwdCfm" required>
+            </p>
+            <input type="hidden" id="timestamp" name="timestamp">
+            <button type="submit" onclick="return validateForm(this.parent)">Submit</button>
+            <button type="reset">Clear</button>
+        </form>
+    </body>
+    
+    <script>
+        function validateForm(form) {
+            if (!form) {
+                // find the right form
+                form = document.getElementById("regForm");
+            }
+            
+            // validate the age
+            var bday = new Date(document.getElementById("bday").value);
+            var now = new Date();
+            now.setFullYear(now.getFullYear() - 18);
+            if (bday > now) {
+                alert("User must be above 18 years old for registration.");
+                return false;
+            }
+            
+            // validate password equality
+            var pwd = document.getElementById("pwd").value;
+            var pwdCfm = document.getElementById("pwdCfm").value;
+            if (pwd != pwdCfm) {
+                alert("The confirmation password does not match the original password.");
+                return false;
+            }
+            
+        }
+        
+        function setPageLoadTime() {
+            var now = new Date();
+            document.getElementById("timestamp").value = now.getTime();
+        }
+    </script>
+</html>

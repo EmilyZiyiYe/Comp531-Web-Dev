@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="author" content="Xiangjin Zou">
+    </head>
+    
+    <body onload="loadData()">
+        <h1>User Data</h1>
+        <table>
+            <tr>
+                <th>Account Name</th>
+                <td id="actName"></td>
+            </tr>
+            <tr>
+                <th>Display Name</th>
+                <td id="dispName"></td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td id="email"></td>
+            </tr>
+            <tr>
+                <th>Phone</th>
+                <td id="phone"></td>
+            </tr>
+            <tr>
+                <th>Date of Birth</th>
+                <td id="bday"></td>
+            </tr>
+            <tr>
+                <th>Zipcode</th>
+                <td id="zipcode"></td>
+            </tr>
+            <tr>
+                <th>Password</th>
+                <td id="pwd"></td>
+            </tr>
+            <tr>
+                <th>Timestamp</th>
+                <td id="timestamp"></td>
+            </tr>
+        </table>
+    </body>
+    
+    <script>
+        function loadData() {
+            var i, url, queries, temp, time
+            
+            url = window.location.search;
+            url = url.replace("%40", "@");
+            // get rid of the first "?" and split the parameters into queries
+            queries = url.substring(1).split("&");
+            
+            
+            for (i = 0; i < queries.length; i++) {
+                temp = queries[i].split("=");
+                document.getElementById(temp[0]).innerHTML = temp[1];
+            }
+            
+            // convert timestamp to human readable time
+            time = new Date(Number(document.getElementById("timestamp").innerHTML));
+            document.getElementById("timestamp").innerHTML = time.toString();
+        }
+    </script>
+</html>
