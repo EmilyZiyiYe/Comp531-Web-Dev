@@ -1,25 +1,68 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>About Xiangjin Zou(Rho)</title>
+    <title>About Xiangjin Zou(Rho)</title>
 </head>
 
-<body>
+<body onload="onLoad()">
 
-<h1>About myself and last trip</h1>
-<img src="https://yt3.ggpht.com/-O3BeKIu8qWA/AAAAAAAAAAI/AAAAAAAAAAA/Yy5JhyVBrm8/s100-c-k-no-mo-rj-c0xffffff/photo.jpg" title="Picture of myself">
-<p>Hi, I am Xiangjin Zou and my friends always call me rho, the greek letter that has been used as my nick name for a long time. My last trip was two weeks ago with my friend Kezhou to <a href="https://www.tripadvisor.com.sg/Tourism-g143031-Great_Smoky_Mountains_National_Park_Tennessee-Vacations.html">Great Smoky Moutains</a>. It was a fun trip! </p>
+    <h1>About myself and last trip</h1>
+    <img src="https://yt3.ggpht.com/-O3BeKIu8qWA/AAAAAAAAAAI/AAAAAAAAAAA/Yy5JhyVBrm8/s100-c-k-no-mo-rj-c0xffffff/photo.jpg" title="Picture of myself">
+    <p>Hi, I am Xiangjin Zou and my friends always call me rho, the greek letter that has been used as my nick name for a long time. My last trip was two weeks ago with my friend Kezhou to <a href="https://www.tripadvisor.com.sg/Tourism-g143031-Great_Smoky_Mountains_National_Park_Tennessee-Vacations.html">Great Smoky Moutains</a>. It was a fun trip! </p> <br/>
 
-<textarea rows="4" cols="50" id="message">
-Guest Message
-</textarea>
+    <span id="interval">15</span> <br/> 
+    <button type="button" id="pause">Pause</button>
+    <button type="button" id="resume">Resume</button> <br/> <br/> 
 
-<button type="button">Submit</button>
+    <textarea rows="4" cols="50" id="message">
+    Guest Message
+    </textarea>
+
+    <button type="button" >Submit</button>
+    <button type="button" id="clear">Clear</button>
 
 </body>
 
 <script>
-    
+    function onLoad() {
+        setTimeout(function(){ alert("the page will redirect when the counter reaches zero"); }, 5000)
+        var clearButton = document.getElementById("clear")
+        clearButton.onclick = function(){
+            var messageText = document.getElementById("message")
+            messageText.value = ""
+        }
+        
+        var countDown = function(){
+            var indicator = document.getElementById("interval")
+            var time = Number(indicator.innerHTML)
+            time = time - 1
+            if (time === 0) {
+                window.location = "https://www.clear.rice.edu/comp431/sample/hello.html"
+            }
+            else {
+                indicator.innerHTML = time
+            }
+            
+        }
+        
+        var timer = setInterval(countDown, 1000)
+        
+        var pause = function(){
+            clearInterval(timer)
+        }
+        
+        var pauseButton = document.getElementById("pause")
+        pauseButton.onclick = pause
+        
+        var resume = function(){
+            timer = setInterval(countDown, 1000)
+        }
+        var resumeButton = document.getElementById("resume")
+        resumeButton.onclick = resume
+        
+        
+    }
+        
 </script>
 
 </html>
