@@ -15,7 +15,9 @@
                 <input type="text" id="dispName" name="dispName">
             </p>
             <p>Email Address <br /> 
-                <input type="email" id="email" name="email" required>
+                <input type="text" id="email" name="email" 
+                       pattern="[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+" 
+                       title="Email should contain @ and . for correct format." required>
             </p>
             <p>Phone Number <br /> 
                 <input type="text" id="phone" name="phone" pattern="\d{3}-\d{3}-\d{4}"
