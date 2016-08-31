@@ -46,8 +46,7 @@
         function loadData() {
             var i, url, queries, temp, time
             
-            url = window.location.search;
-            url = url.replace("%40", "@");
+            url = decodeURIComponent(window.location.search);
             // get rid of the first "?" and split the parameters into queries
             queries = url.substring(1).split("&");
             
