@@ -1,0 +1,31 @@
+td {
+    box-shadow: 0 10px 20px 0 blue;
+    transition: 0.1s;
+    /* 8px rounded corners */
+    border-radius: 5px; 
+    width: 500px;
+}
+
+/* On mouse-over, add a deeper shadow */
+td:hover {
+    box-shadow: 0 10px 20px 0 grey;
+}
+
+/* Add rounded corners to the top left and the top right corner of the image */
+img {
+    border-radius: 8px 8px 0 0;
+}
+
+.container {
+    height: 200px;
+}
+
+.container img {
+    height: 100%;
+}
+
+Input {
+    height: 25px;
+    width: 50px;
+    border-radius: 5px;
+}
