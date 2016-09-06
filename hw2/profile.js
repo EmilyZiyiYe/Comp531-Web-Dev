@@ -8,21 +8,17 @@ function testPattern(regex, string) {
     }
 }
 
-var submitBtn = document.getElementById("submit")
-submitBtn.onclick = function() {
-    var updatedFields = []
-    var inputs = []
-    
+function validateName(inputs, updatedFields){
     var nameInput = document.getElementById("dispName");
     inputs.push(nameInput)
     var name = nameInput.value
     var existedName = document.getElementById("dispNameValue")
     if (name.trim() && name !== existedName.innerHTML){
-        updatedFields.push(["display Name", name])
+        updatedFields.push(["display name", name])
     }
-    
-    
-    // validate email input
+}
+
+function validateEmail(inputs, updatedFields){
     var emailInput = document.getElementById("email")
     inputs.push(emailInput)
     var email = emailInput.value
@@ -34,8 +30,9 @@ submitBtn.onclick = function() {
     if (email !== existedEmail.innerHTML){
         updatedFields.push(["email", email])
     }
-    
-    // validate phone number input
+}
+
+function validatePhone(inputs, updatedFields){
     var phoneInput = document.getElementById("phone")
     inputs.push(phoneInput)
     var phone = phoneInput.value
@@ -47,8 +44,9 @@ submitBtn.onclick = function() {
     if (phone !== existedPhone.innerHTML){
         updatedFields.push(["phone", phone])
     }
-    
-    // validate zipcode
+}
+
+function validateZipcode(inputs, updatedFields){
     var zipcodeInput = document.getElementById("zipcode")
     inputs.push(zipcodeInput)
     var zipcode = zipcodeInput.value
@@ -60,8 +58,49 @@ submitBtn.onclick = function() {
     if (zipcode !== existedZipcode.innerHTML) {
         updatedFields.push(["zipcode", zipcode])
     }
+}
+
+
+function validatePassword(inputs){
+    var pwdInput = document.getElementById("pwd")
+    var pwdCfmInput = document.getElementById("pwdCfm")
+    inputs.push(pwdInput)
+    inputs.push(pwdCfmInput)
+    var pwd = pwdInput.value
+    var pwdCfm = pwdCfmInput.value
+    var pwdUpdatedText = document.getElementById("pwdUpdateTxt")
+    if (pwd !== pwdCfm) {
+        alert("Password and confirmation password don't match.")
+        pwdUpdatedText.style.display = "none"
+        return
+    }
+    else {
+        var pwdValueInput = document.getElementById("pwdValue")
+        if (pwd !== pwdValueInput.innerHTML) {
+            pwdUpdatedText.style.display = "inline"
+            pwdValueInput.innerHTML = pwd
+        }
+        else {
+            pwdUpdatedText.style.display = "none"
+        }
+    }
+}
+
+var submitBtn = document.getElementById("submit")
+submitBtn.onclick = function() {
+    // array that stores the input fields which have been updated
+    var updatedFields = []
+    // cached input DOM elements
+    var inputs = []
     
-    // inform users what field have been updated
+    // validate each input field
+    validateName(inputs, updatedFields)
+    validateEmail(inputs, updatedFields)
+    validatePhone(inputs, updatedFields)
+    validateZipcode(inputs, updatedFields)
+    validatePassword(inputs)
+    
+    // inform users what fields have been updated
     if (updatedFields.length > 0) {
         var updateMessage = ""
         updatedFields.forEach(function(item, index){
@@ -74,7 +113,6 @@ submitBtn.onclick = function() {
         updateMessage += " have been updated."
         alert(updateMessage)
         
-        // update the values and clear the input
         updatedFields.forEach(function(item){
             var fieldId = item[0]
             if (fieldId === "display name") {
@@ -84,12 +122,11 @@ submitBtn.onclick = function() {
             document.getElementById(fieldId).innerHTML = item[1]
         })
         
-        inputs.forEach(function(item){
-            item.value = ""
-        })
     }
     
-    
-    
+    // clear all the input fields
+    inputs.forEach(function(item){
+            item.value = ""
+    })
     
 }

@@ -2,12 +2,12 @@
 <html>
     <head>
         <meta name="author" content="Xiangjin Zou">
+        <link rel="stylesheet" type="text/css" href="style.css">
     </head>
     
     <body>
-        <h1>User Profile</h1>
-     <from>  
-        <p>Display Name:
+        <h1>User Profile</h1>  
+        <p>Display Name (Optional):
             <input type="text" id="dispName" name="dispName">
             <span id="dispNameValue">Rho</span>
         </p>
@@ -25,15 +25,15 @@
             <span id="zipcodeValue">77005</span>
         </p>
         <p>Password:
-            <input type="password" id="pwd" name="pwd" required>
+            <input type="password" id="pwd" name="pwd" required> <span id="pwdValue" style="display:none"></span>
+            <span id="pwdUpdateTxt" style="color: blue; display:none">Password Updated</span>
         </p>
         <p>Password Confirmation:
-            <input type="password" id="pwdCfm" required>
+            <input type="password" id="pwdCfm" required> 
         </p>
         <br />
         <button id="submit">Submit</button> <br />
-        <a href="main.html">Main Page</a>
-      </from>   
+        <a href="main.html">Main Page</a>  
     </body>
     
     <script src="profile.js"></script>

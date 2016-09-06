@@ -1,21 +1,22 @@
-bulbImg = ["001", "002", "003"]
-charImg = ["004", "005", "006"]
-squImg = ["007", "008", "009"]
-arbaImg = ["063", "064", "065"]
-eveImg = ["133", "134", "135", "136"]
-allImgIndex = [bulbImg, charImg, squImg, arbaImg, eveImg]
+var bulbImg = ["001", "002", "003"]
+var charImg = ["004", "005", "006"]
+var squImg = ["007", "008", "009"]
+var arbaImg = ["063", "064", "065"]
+var eveImg = ["133", "134", "135", "136"]
+var allImgIndex = [bulbImg, charImg, squImg, arbaImg, eveImg]
 
-timers = []
-counters = [0, 0, 0, 0, 0]
+var timers = []
+var counters = [0, 0, 0, 0, 0]
 
-START = "Start"
-STOP = "Stop"
+var START = "Start"
+var STOP = "Stop"
 
-allImgs = document.getElementsByTagName("img")
-allButtons = document.getElementsByTagName("input")
+var allImgs = document.getElementsByTagName("img")
+var allButtons = document.getElementsByTagName("input")
 
 function getImgSrc(imgIdx) {
-    return "http://assets.pokemon.com/assets/cms2/img/pokedex/full/" + imgIdx + ".png"
+    return "http://assets.pokemon.com/assets/cms2/img/pokedex/full/" 
+        + imgIdx + ".png"
 }
 
 function randomInterval() {

@@ -29,3 +29,12 @@ Input {
     width: 50px;
     border-radius: 5px;
 }
+
+a {
+    padding-left: 500px;
+}
+
+button {
+    border-radius: 3px;
+    color: blue;
+}
