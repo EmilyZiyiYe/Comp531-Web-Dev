@@ -8,28 +8,27 @@
     <body>
         <h1>User Profile</h1>  
         <p>Display Name (Optional):
-            <input type="text" id="dispName" name="dispName">
-            <span id="dispNameValue">Rho</span>
+            <input type="text" id="dispName" name="dispName" class="profileInput">
+            <span id="dispNameValue" class="oldValue">Rho</span>
         </p>
         <p>Email Address:
-            <input type="text" id="email" name="email" >
-            <span id="emailValue">xxx@rice.edu</span>
+            <input type="text" id="email" name="email" class="profileInput">
+            <span id="emailValue" class="oldValue">xxx@rice.edu</span>
         </p>
         <p>Phone Number: 
-            <input type="text" id="phone" name="phone" >
-            <span id="phoneValue">111-111-1111</span>
+            <input type="text" id="phone" name="phone" class="profileInput">
+            <span id="phoneValue" class="oldValue">111-111-1111</span>
         </p>
         <p>Zipcode:
-            <input type="text" id="zipcode" name="zipcode"  pattern="\d{5}"
-                   title="US zipcode should be exactly 5 digits." required>
-            <span id="zipcodeValue">77005</span>
+            <input type="text" id="zipcode" name="zipcode"  class="profileInput">
+            <span id="zipcodeValue" class="oldValue">77005</span>
         </p>
         <p>Password:
-            <input type="password" id="pwd" name="pwd" required> <span id="pwdValue" style="display:none"></span>
-            <span id="pwdUpdateTxt" style="color: blue; display:none">Password Updated</span>
+            <input type="password" id="pwd" name="pwd" class="profileInput"> <span id="pwdValue" style="display:none"></span>
+            <span id="pwdUpdateTxt" style="color: blue; display:none" class="oldValue">Password Updated</span>
         </p>
         <p>Password Confirmation:
-            <input type="password" id="pwdCfm" required> 
+            <input type="password" id="pwdCfm" class="profileInput"> 
         </p>
         <br />
         <button id="submit">Submit</button> <br />

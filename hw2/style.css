@@ -38,3 +38,21 @@ button {
     border-radius: 3px;
     color: blue;
 }
+
+.profileInput {
+    width: 200px;
+    position:absolute;
+    left: 500px;
+}
+
+.oldValue {
+    position:absolute;
+    left: 750px;
+}
+
+.pokeName {
+    position: relative;
+    padding-left: 100px;
+    color: gold;
+    font-size: 25px;
+}
