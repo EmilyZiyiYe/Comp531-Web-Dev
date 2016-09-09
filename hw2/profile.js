@@ -12,6 +12,11 @@ function validateName(inputs, updatedFields){
     var nameInput = document.getElementById("dispName");
     inputs.push(nameInput)
     var name = nameInput.value
+    if (!testPattern("[A-Za-z]+[A-Za-z0-9]*", name)) {
+        alert("Account name can only be upper or lower case letters " + 
+              "and numbers, but may not start with a number")
+        return
+    }
     var existedName = document.getElementById("dispNameValue")
     if (name.trim() && name !== existedName.innerHTML){
         updatedFields.push(["display name", name])
@@ -104,24 +109,19 @@ submitBtn.onclick = function() {
     if (updatedFields.length > 0) {
         var updateMessage = ""
         updatedFields.forEach(function(item, index){
-            updateMessage += item[0]
-            if (index !== updatedFields.length - 1){
-                updateMessage += ","
-            }
-        })
-        
-        updateMessage += " have been updated."
-        alert(updateMessage)
-        
-        updatedFields.forEach(function(item){
             var fieldId = item[0]
+            updateMessage += fieldId
+            updateMessage += " have been updated from "
             if (fieldId === "display name") {
                 fieldId = "dispName"
             }
             fieldId = fieldId + "Value"
-            document.getElementById(fieldId).innerHTML = item[1]
-        })
+            var updatedInput = document.getElementById(fieldId)
+            updateMessage += (updatedInput.innerHTML + " to " + item[1] + "\n")
+            updatedInput.innerHTML = item[1]
+        }) 
         
+        alert(updateMessage)
     }
     
     // clear all the input fields
