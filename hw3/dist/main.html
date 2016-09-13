@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="author" content="Xiangjin Zou">
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" 
+              href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
+              integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" 
+              href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
+        <script src="main.js" ></script>
+        <title> Welcome to OwlBook !</title>
+    </head>
+    
+    <body>
+        <div class="row" >
+        
+            <div class="col-md-3">
+                <ul class="nav nav-pills nav-stacked">
+                    <li>
+                        <button class="btn" id="logoutBtn">Log Out</button>
+                        <button class="btn" id="profileBtn">Profile</button>
+                    </li>
+                    <li>
+                        <div class="card">
+                            <img src="http://assets.pokemon.com/assets/cms2/img/pokedex/full/025.png" >
+                            <div class="cardContainer">
+                                <h5><b>Pikachu</b></h5> 
+                                <p>I am feeling good!</p>
+
+                                <input type="text" name="status" placeholder="Status..." class="form-control" id="status">
+                                <br />
+                                <button class="btn">Update</button>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="card">
+                            <img src="http://assets.pokemon.com/assets/cms2/img/pokedex/full/035.png" >
+                            <div class="cardContainer">
+                                <h5><b>Clefairy</b></h5> 
+                                <p>I am so cute!</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="card">
+                            <img src="http://assets.pokemon.com/assets/cms2/img/pokedex/full/038.png" >
+                            <div class="cardContainer">
+                                <h5><b>Ninetails</b></h5> 
+                                <p>I am so beautiful!</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="card">
+                            <img src="http://assets.pokemon.com/assets/cms2/img/pokedex/full/054.png" >
+                            <div class="cardContainer">
+                                <h5><b>Psyduck</b></h5> 
+                                <p>I am so dumb!</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <input type="text" name="newUser" placeholder="New User..." class="form-control" id="newUser">
+                        <button class="btn">Add</button>
+                    </li>
+                </ul>
+            </div>
+
+
+            <div class="col-md-9">
+                <h1><strong>Welcome to OwlBook!</strong></h1>
+
+                <p>
+                    <h5>A place where you can connect anybody from Rice campus</h5>
+                    <br />
+                </p>
+
+                <div class="btn-group-vertical">
+                  <button type="button" class="btn btn-primary">
+                      <span class="glyphicon glyphicon-picture"></span> Add Image</button>
+                  <button type="button" class="btn btn-primary">Cancel</button>
+                  <button type="button" class="btn btn-primary">Post</button>
+                </div>
+                    
+                <div class="col-xs-7">
+                    <textarea class="form-control" rows="6" placeholder="What is on your mind?" id="userPost"></textarea>
+                </div>
+            </div>
+        </div>           
+        
+    </body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="author" content="Xiangjin Zou">
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" 
+              href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
+              integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" 
+              href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
+        <script src="index.js" ></script>
+        <title> Welcome to OwlBook !</title>
+    </head>
+    
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-8 col-sm-offset-2 text">
+                    <h1><strong>Welcome to OwlBook!</strong></h1>
+                    
+                    <p>
+                        <h5>A place where you can connect anybody from Rice campus</h5>
+                    </p>
+                    
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-5">
+
+                    <div class="form-box">
+                        <div class="form-top">
+                            <div class="form-top-left">
+                                <h3>Login</h3>
+                                <p>Enter username and password to login:</p>
+                            </div>
+                        </div>
+                        <div class="form-bottom">
+                            <form role="form" method="GET" action="main.html"  id="loginForm">
+                                <div class="form-group">
+                                    <label class="sr-only">Username</label>
+                                    <input type="text" name="username" placeholder="Username..." class="form-control" id="username">
+                                </div>
+                                <div class="form-group">
+                                    <label class="sr-only">Password</label>
+                                    <input type="password" name="password" placeholder="Password..." class="form-control" id="password">
+                                </div>
+                                <button type="submit" class="btn" id="loginBtn">Login!</button>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-sm-1 middle-border"></div>
+                <div class="col-sm-1"></div>
+
+                <div class="col-sm-5">
+
+                    <div class="form-box">
+                        <div class="form-top">
+                            <div class="form-top-left">
+                                <h3>Sign up</h3>
+                                <p>Seconds away to get access to OwlBook:</p>
+                            </div>
+                        </div>
+                        <div class="form-bottom">
+                            <form role="form" action="main.html" method="GET" id="regForm">
+                                <div class="form-group">
+                                    <label class="sr-only">Account Name</label>
+                                    <input type="text" name="accountName" placeholder="Account name..." class="form-control" id="accountName" 
+                                    pattern="[A-Za-z]+[A-Za-z0-9]*" 
+                                    title="Account name can only be upper or lower case letters and numbers, but may not start with a number" required>
+                                </div>
+                                <div class="form-group">
+                                    <label class="sr-only">Display Name</label>
+                                    <input type="text" name="displayName" placeholder="Display name(optional)..." class="form-control" id="displaName">
+                                </div>
+                                <div class="form-group">
+                                    <label class="sr-only">Email</label>
+                                    <input type="email" name="email" placeholder="Email..." class="form-control" id="email" pattern="[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+" 
+                                    title="Email should contain @ and . for correct format." required>
+                                </div>
+                                <div class="form-group">
+                                    <label class="sr-only">Phone</label>
+                                    <input type="text" name="phone" placeholder="Phone..." class="form-control" id="email" pattern="\d{3}-\d{3}-\d{4}"
+                                    title="Phone number should be format of 123-123-1234" required>
+                                </div>
+                                <div class="form-group">
+                                    <label class="sr-only">Date of Birth</label>
+                                    <input type="text" id="bday" name="bday" onfocus="(this.type='date')"
+                                           placeholder="Date of birth..." class="form-control" required>
+                                </div>
+                                <div class="form-group">
+                                    <label class="sr-only">Zipcode</label>
+                                    <input type="text" id="zipcode" name="zipcode"  pattern="\d{5}"
+                                    title="US zipcode should be exactly 5 digits." placeholder="Zipcode..."
+                                    class="form-control" required>
+                                </div>
+                                <div class="form-group">
+                                    <label class="sr-only">Password</label>
+                                    <input type="password" id="pwd" placeholder="Password..." name="pwd" class="form-control" required>
+                                </div>
+                                <div class="form-group">
+                                    <label class="sr-only">Password Confirmation</label>
+                                    <input type="password" id="pwdCfm" placeholder="Password Confirmation..." name="pwdCfm" class="form-control" required>
+                                </div>
+                                <button type="submit" class="btn">Register!</button>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
