@@ -14,4 +14,103 @@
         <script src="profile.js" ></script>
         <title> Welcome to OwlBook !</title>
     </head>
+    
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <button class="btn" id="mainPageBtn">Main Page</button>
+                </div>
+                <div class="col-md-8 col-md-offset-2 text">
+                    <h1><strong>Welcome to OwlBook!</strong></h1>
+                    
+                    <p>
+                        <h5>A place where you can connect anybody from Rice campus</h5>
+                    </p>
+                    
+                </div>
+            </div>
+        
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="http://assets.pokemon.com/assets/cms2/img/pokedex/full/025.png" >
+                    <br />
+                    <button class="btn">Upload Picture</button>
+                    <br /><br /><br />
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th><h3>Current Info</h3></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Display Name: <span class="spanValue" id="displayNameValue">Rho</span></td>
+                            </tr>
+                            <tr>
+                                <td>Email: <span class="spanValue" id="emailValue">rho@rice.edu</span></td>
+                            </tr>
+                            <tr>
+                                <td>Phone: <span class="spanValue" id="phoneValue">111-111-1111</span></td>
+                            </tr>
+                            <tr>
+                                <td>Date of Birth: <span class="spanValue">10/01/1990</span></td>
+                            </tr>
+                            <tr>
+                                <td>Zipcode: <span id="zipcodeValue" class="spanValue">77005</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="col-md-6">
+                    <div class="form-box" id="updateForm">
+                        <div class="form-top">
+                            <div class="form-top-left">
+                                <h3>Update Info</h3>
+                            </div>
+                        </div>
+                        <div class="form-bottom">
+                            <form role="form" action="#" method="GET" id="regForm">
+                                <div class="form-group">
+                                    <label class="sr-only">Display Name</label>
+                                    <input type="text" name="displayName" placeholder="Display name..."
+                                           id="displayName" pattern="[A-Za-z]+[A-Za-z0-9]*" class="form-control"
+                                           title="Display name can only be upper or lower case letters and numbers, but may not start with a number" required>
+                                </div>
+                                <div class="form-group">
+                                    <label class="sr-only">Email</label>
+                                    <input type="email" name="email" placeholder="Email..." class="form-control" id="email" pattern="[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+" 
+                                    title="Email should contain @ and . for correct format." required>
+                                </div>
+                                <div class="form-group">
+                                    <label class="sr-only">Phone</label>
+                                    <input type="text" name="phone" placeholder="Phone..." class="form-control" id="phone" pattern="\d{3}-\d{3}-\d{4}"
+                                    title="Phone number should be format of 123-123-1234" required>
+                                </div>
+                                <div class="form-group">
+                                    <label class="sr-only">Zipcode</label>
+                                    <input type="text" id="zipcode" name="zipcode"  pattern="\d{5}"
+                                    title="US zipcode should be exactly 5 digits." placeholder="Zipcode..."
+                                    class="form-control" required>
+                                </div>
+                                <div class="form-group">
+                                    <label class="sr-only">Password</label>
+                                    <input type="password" id="pwd" placeholder="Password..." name="pwd" class="form-control" required>
+                                </div>
+                                <button type="submit" class="btn" id="updateBtn">Update</button>
+                            </form>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    <footer class="footer">
+      <div class="container">
+        <p class="text-muted">Place sticky footer content here.</p>
+      </div>
+    </footer>
+    </body>
 </html>

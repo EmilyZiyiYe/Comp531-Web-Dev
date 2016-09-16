@@ -69,3 +69,14 @@ img {
 .nav {
     width: 250px;
 }
+
+.spanValue {
+    left: 220px;
+    position: absolute;
+}
+
+#updateForm {
+    position: relative;
+    top: 240px;
+}
+
