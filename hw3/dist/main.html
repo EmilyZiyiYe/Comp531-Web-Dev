@@ -16,82 +16,287 @@
     </head>
     
     <body>
-        <div class="row" >
-        
-            <div class="col-md-3">
-                <ul class="nav nav-pills nav-stacked">
-                    <li>
-                        <button class="btn" id="logoutBtn">Log Out</button>
-                        <button class="btn" id="profileBtn">Profile</button>
-                    </li>
-                    <li>
-                        <div class="card">
-                            <img src="http://assets.pokemon.com/assets/cms2/img/pokedex/full/025.png" >
-                            <div class="cardContainer">
-                                <h5><b>Pikachu</b></h5> 
-                                <p>I am feeling good!</p>
+        <div class="container-fluid">
+            <div class="row" >
 
-                                <input type="text" name="status" placeholder="Status..." class="form-control" id="status">
+                <div class="col-xs-6 col-md-3">
+                    <ul class="nav nav-pills nav-stacked">
+                        <li>
+                            <button class="btn" id="logoutBtn">Log Out</button>
+                            <button class="btn" id="profileBtn">Profile</button>
+                        </li>
+                        <li>
+                            <div class="card">
+                                <img src="http://assets.pokemon.com/assets/cms2/img/pokedex/full/025.png" >
+                                <div class="cardContainer">
+                                    <h5><b>Pikachu</b></h5> 
+                                    <span id="status">I am feeling good!</span>
+
+                                    <input type="text" name="status" id="statusInput" placeholder="Status..." class="form-control" id="status">
+                                    
+                                    <button class="btn" id="updateStatusBtn">Update</button>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="card">
+                                <img src="http://assets.pokemon.com/assets/cms2/img/pokedex/full/035.png" >
+                                <div class="cardContainer">
+                                    <h5><b>Clefairy</b></h5> 
+                                    <p>I am so cute! <button class="btn unfollowBtn">Unfollow</button> </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="card">
+                                <img src="http://assets.pokemon.com/assets/cms2/img/pokedex/full/038.png" >
+                                <div class="cardContainer">
+                                    <h5><b>Ninetails</b></h5> 
+                                    <p>I am so beautiful! <button class="btn unfollowBtn">Unfollow</button> </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="card">
+                                <img src="http://assets.pokemon.com/assets/cms2/img/pokedex/full/054.png" >
+                                <div class="cardContainer">
+                                    <h5><b>Psyduck</b></h5> 
+                                    <p>I am so dumb! <button class="btn unfollowBtn">Unfollow</button> </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <br />
+                            <input type="text" name="newUser" placeholder="New User..." class="form-control" id="newUser">
+                            <button class="btn">Add</button>
+                        </li>
+                    </ul>
+                </div>
+
+
+                <div class="col-xs-6 col-md-9">
+                    <h1><strong>Welcome to OwlBook!</strong></h1>
+
+                    <p>
+                        <h5>A place where you can connect anybody from Rice campus</h5>
+                        <br />
+                    </p>
+
+                    <div class="btn-group-vertical">
+                        <label class="btn btn-default btn-file"> <span class="glyphicon glyphicon-picture"></span>
+                        Add Image <input type="file" style="display: none;">
+                        </label>
+                        <button type="button" class="btn btn-primary">Cancel</button>
+                        <button type="button" class="btn btn-primary">Post</button>
+                    </div>
+
+                    <div class="col-xs-6 col-md-7">
+                        <textarea class="form-control" rows="6" placeholder="What is on your mind?" id="userPost"></textarea>
+                        <br />
+                    </div>
+
+                    <div class="row">
+                        <div class="col-xs-6 col-md-9">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Search for...">
+                                <span class="input-group-btn">
+                                <button type="button" class="btn btn-primary">
+                                <span class="glyphicon glyphicon-search"></span> Search</button>
+                                </span>
                                 <br />
-                                <button class="btn">Update</button>
                             </div>
                         </div>
-                    </li>
-                    <li>
-                        <div class="card">
-                            <img src="http://assets.pokemon.com/assets/cms2/img/pokedex/full/035.png" >
-                            <div class="cardContainer">
-                                <h5><b>Clefairy</b></h5> 
-                                <p>I am so cute!</p>
+                    </div>
+                
+                    <div class="row">
+                        <div class="col-xs-3 col-md-5">
+                            <div class="card">
+                                <div class="media">
+                                    <div class="media-left media-top">
+                                    </div>
+                                    <div class="media-body">
+                                        <a href="#">Bulbasaur</a>
+                                        <br> Yesterday at 3:48pm <span class="glyphicon glyphicon-user"></span>
+                                    </div>
+                                    <img class="img-responsive" src="http://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png" >
+                                    <p>Bulbasaur can be seen napping in bright sunlight. There is a seed on its back. By soaking up the sun's rays, the seed grows progressively larger.</p>
+                                    <ul class="list-inline">
+                                        <li>
+                                        <a href="#"><span class="glyphicon glyphicon-comment"></span> Comment</a>
+                                        </li>
+                                        <li>
+                                        <a href="#"><span class="glyphicon glyphicon-edit"></span> Edit</a>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
-                    </li>
-                    <li>
-                        <div class="card">
-                            <img src="http://assets.pokemon.com/assets/cms2/img/pokedex/full/038.png" >
-                            <div class="cardContainer">
-                                <h5><b>Ninetails</b></h5> 
-                                <p>I am so beautiful!</p>
+                        <div class="col-xs-3 col-md-5">
+                            <div class="card">
+                                <div class="media">
+                                    <div class="media-left media-top">
+                                    </div>
+                                    <div class="media-body">
+                                        <a href="#">Ivysaur</a>
+                                        <br> Yesterday at 3:49pm <span class="glyphicon glyphicon-user"></span>
+                                    </div>
+                                    <img class="img-responsive" src="http://assets.pokemon.com/assets/cms2/img/pokedex/full/002.png" >
+                                    <p>There is a bud on this Pokemon's back. To support its weight, Ivysaur's legs and trunk grow thick and strong. If it starts spending more time lying in the sunlight, it's a sign that the bud will bloom into a large flower soon.</p>
+                                    <ul class="list-inline">
+                                        <li>
+                                        <a href="#"><span class="glyphicon glyphicon-comment"></span> Comment</a>
+                                        </li>
+                                        <li>
+                                        <a href="#"><span class="glyphicon glyphicon-edit"></span> Edit</a>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
-                    </li>
-                    <li>
-                        <div class="card">
-                            <img src="http://assets.pokemon.com/assets/cms2/img/pokedex/full/054.png" >
-                            <div class="cardContainer">
-                                <h5><b>Psyduck</b></h5> 
-                                <p>I am so dumb!</p>
+                    </div>
+                
+                    <div class="row">
+                        <div class="col-xs-3 col-md-5">
+                            <div class="card">
+                                <div class="media">
+                                    <div class="media-left media-top">
+                                    </div>
+                                    <div class="media-body">
+                                        <a href="#">Venusaur</a>
+                                        <br> Yesterday at 2:49pm <span class="glyphicon glyphicon-user"></span>
+                                    </div>
+                                    <img class="img-responsive" src="http://assets.pokemon.com/assets/cms2/img/pokedex/full/003.png" >
+                                    <p>There is a large flower on Venusaur's back. The flower is said to take on vivid colors if it gets plenty of nutrition and sunlight. The flower's aroma soothes the emotions of people.</p>
+                                    <ul class="list-inline">
+                                        <li>
+                                        <a href="#"><span class="glyphicon glyphicon-comment"></span> Comment</a>
+                                        </li>
+                                        <li>
+                                        <a href="#"><span class="glyphicon glyphicon-edit"></span> Edit</a>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
-                    </li>
-                    <li>
-                        <input type="text" name="newUser" placeholder="New User..." class="form-control" id="newUser">
-                        <button class="btn">Add</button>
-                    </li>
-                </ul>
-            </div>
-
-
-            <div class="col-md-9">
-                <h1><strong>Welcome to OwlBook!</strong></h1>
-
-                <p>
-                    <h5>A place where you can connect anybody from Rice campus</h5>
-                    <br />
-                </p>
-
-                <div class="btn-group-vertical">
-                  <button type="button" class="btn btn-primary">
-                      <span class="glyphicon glyphicon-picture"></span> Add Image</button>
-                  <button type="button" class="btn btn-primary">Cancel</button>
-                  <button type="button" class="btn btn-primary">Post</button>
+                        <div class="col-xs-3 col-md-5">
+                            <div class="card">
+                                <div class="media">
+                                    <div class="media-left media-top">
+                                    </div>
+                                    <div class="media-body">
+                                        <a href="#">Charmander</a>
+                                        <br> Yesterday at 1:49pm <span class="glyphicon glyphicon-user"></span>
+                                    </div>
+                                    <img class="img-responsive" src="http://assets.pokemon.com/assets/cms2/img/pokedex/full/004.png" >
+                                    <p>The flame that burns at the tip of its tail is an indication of its emotions. The flame wavers when Charmander is enjoying itself. If the Pokémon becomes enraged, the flame burns fiercely.</p>
+                                    <ul class="list-inline">
+                                        <li>
+                                        <a href="#"><span class="glyphicon glyphicon-comment"></span> Comment</a>
+                                        </li>
+                                        <li>
+                                        <a href="#"><span class="glyphicon glyphicon-edit"></span> Edit</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="row">
+                        <div class="col-xs-3 col-md-5">
+                            <div class="card">
+                                <div class="media">
+                                    <div class="media-left media-top">
+                                    </div>
+                                    <div class="media-body">
+                                        <a href="#">Charmeleon</a>
+                                        <br> Yesterday at 12:49pm <span class="glyphicon glyphicon-user"></span>
+                                    </div>
+                                    <img class="img-responsive" src="http://assets.pokemon.com/assets/cms2/img/pokedex/full/005.png" >
+                                    <p>Charmeleon mercilessly destroys its foes using its sharp claws. If it encounters a strong foe, it turns aggressive. In this excited state, the flame at the tip of its tail flares with a bluish white color.</p>
+                                    <ul class="list-inline">
+                                        <li>
+                                        <a href="#"><span class="glyphicon glyphicon-comment"></span> Comment</a>
+                                        </li>
+                                        <li>
+                                        <a href="#"><span class="glyphicon glyphicon-edit"></span> Edit</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-3 col-md-5">
+                            <div class="card">
+                                <div class="media">
+                                    <div class="media-left media-top">
+                                    </div>
+                                    <div class="media-body">
+                                        <a href="#">Charizard</a>
+                                        <br> Yesterday at 10:49pm <span class="glyphicon glyphicon-user"></span>
+                                    </div>
+                                    <img class="img-responsive" src="http://assets.pokemon.com/assets/cms2/img/pokedex/full/006.png" >
+                                    <p>Charizard flies around the sky in search of powerful opponents. It breathes fire of such great heat that it melts anything. However, it never turns its fiery breath on any opponent weaker than itself.</p>
+                                    <ul class="list-inline">
+                                        <li>
+                                        <a href="#"><span class="glyphicon glyphicon-comment"></span> Comment</a>
+                                        </li>
+                                        <li>
+                                        <a href="#"><span class="glyphicon glyphicon-edit"></span> Edit</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="row">
+                        <div class="col-xs-3 col-md-5">
+                            <div class="card">
+                                <div class="media">
+                                    <div class="media-left media-top">
+                                    </div>
+                                    <div class="media-body">
+                                        <a href="#">Squirtle</a>
+                                        <br> Yesterday at 9:49pm <span class="glyphicon glyphicon-user"></span>
+                                    </div>
+                                    <img class="img-responsive" src="http://assets.pokemon.com/assets/cms2/img/pokedex/full/007.png" >
+                                    <p>Squirtle's shell is not merely used for protection. The shell's rounded shape and the grooves on its surface help minimize resistance in water, enabling this Pokémon to swim at high speeds.</p>
+                                    <ul class="list-inline">
+                                        <li>
+                                        <a href="#"><span class="glyphicon glyphicon-comment"></span> Comment</a>
+                                        </li>
+                                        <li>
+                                        <a href="#"><span class="glyphicon glyphicon-edit"></span> Edit</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-3 col-md-5">
+                            <div class="card">
+                                <div class="media">
+                                    <div class="media-left media-top">
+                                    </div>
+                                    <div class="media-body">
+                                        <a href="#">Wartortle</a>
+                                        <br> Yesterday at 5:49pm <span class="glyphicon glyphicon-user"></span>
+                                    </div>
+                                    <img class="img-responsive" src="http://assets.pokemon.com/assets/cms2/img/pokedex/full/008.png" >
+                                    <p>Its tail is large and covered with a rich, thick fur. The tail becomes increasingly deeper in color as Wartortle ages. The scratches on its shell are evidence of this Pokémon's toughness as a battler.</p>
+                                    <ul class="list-inline">
+                                        <li>
+                                        <a href="#"><span class="glyphicon glyphicon-comment"></span> Comment</a>
+                                        </li>
+                                        <li>
+                                        <a href="#"><span class="glyphicon glyphicon-edit"></span> Edit</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                    
-                <div class="col-xs-7">
-                    <textarea class="form-control" rows="6" placeholder="What is on your mind?" id="userPost"></textarea>
-                </div>
-            </div>
-        </div>           
-        
+            </div>           
+        </div>   
     </body>
 </html>

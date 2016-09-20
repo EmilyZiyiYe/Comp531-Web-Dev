@@ -26,10 +26,7 @@ window.onload = function() {
                     inputSpan.innerHTML = input.value
                 }
             }
-            else{
-                alert(input.title)
-                return false
-            }
+            input.value = ""
         })
         return false
     }

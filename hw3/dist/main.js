@@ -8,4 +8,11 @@ window.onload = function() {
     profileBtn.onclick = function() {
         window.location = "profile.html"
     }
+    
+    var updateStatusBtn = document.getElementById("updateStatusBtn")
+    var statusInput = document.getElementById("statusInput")
+    updateStatusBtn.onclick = function() {
+        document.getElementById("status").innerHTML = statusInput.value 
+        statusInput.value = ""
+    }
 }
