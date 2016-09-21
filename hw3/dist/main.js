@@ -15,4 +15,9 @@ window.onload = function() {
         document.getElementById("status").innerHTML = statusInput.value 
         statusInput.value = ""
     }
+    
+    var cancelBtn = document.getElementById("cancelBtn")
+    cancelBtn.onclick = function() {
+        document.getElementById("userPost").value = ""
+    }
 }
