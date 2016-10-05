@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="game.js"></script>
+    <meta name="author" content="Xiangjin Zou">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" 
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" 
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="game.css" />
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div>
+	       <canvas width="1200" height="500"></canvas>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div id="hiddenImage" class="col-sm-3">
+            <img id="cannon" src="cannon.jpg" />
+        </div>
+        
+        <div class="col-sm-3">
+            <div class="btn-group-vertical">
+                <button type="button" class="btn btn-primary" id="startBtn">Start Game</button>
+                <br />
+                <button type="button" class="btn btn-primary" id="endBtn" disabled>End Game</button>
+            </div>
+        </div>
+        
+        <div class="col-sm-3">
+            <table class="table">
+                <tbody>
+                    <tr>
+                        <td>
+                            <img id="redplane" src="redplane.png" />
+                        </td>
+                        <td>
+                            <span>10 Points</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img id="yellowplane" src="yellowplane.png" />
+                        </td>
+                        <td>
+                            <span>20 Points</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img id="blueplane" src="blueplane.png" />
+                        </td>
+                        <td>
+                            <span>30 Points</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="col-sm-3">
+            <table class="table">
+                <tbody>
+                    <tr>
+                        <td>
+                            Total Points:
+                        </td>
+                        <td>
+                            <span id="totalPts">0</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Attempts:
+                        </td>
+                        <td>
+                            <span id="attempts">0</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Hit Rate:
+                        </td>
+                        <td>
+                            <span id="hitRate">0%</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Difficulty Level:
+                        </td>
+                        <td>
+                            <span id="level">1</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+
+</body>
+</html>

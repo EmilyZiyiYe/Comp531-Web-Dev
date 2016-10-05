@@ -1,0 +1,19 @@
+{
+  "name": "RhoGame",
+  "version": "1.0.0",
+  "description": "COMP 431/531 Javasciprt Game",
+  "main": "./dist/game.html",
+  "scripts": {
+    "deploy": "surge -p dist",
+    "start": "python -m SimpleHTTPServer 8081"
+  },
+  "author": "Xiangjin Zou",
+  "license": "MIT",
+  "devDependencies": {
+    "surge": "^0.18.0"
+  },
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "font-awesome": "^4.6.1"
+  }
+}
