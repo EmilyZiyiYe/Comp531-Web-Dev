@@ -1,4 +1,7 @@
 var createApp = function(canvas) { 
+    canvas.setAttribute("width", 1200)
+    canvas.setAttribute("height", 500)
+    
 	var context = canvas.getContext("2d");
     var floor = (canvas.height * 9) / 10
     var canvasWidth = canvas.width
@@ -9,11 +12,15 @@ var createApp = function(canvas) {
     const PLANEDIMENSION = 60
     const CANNONDIMENSION = 50
     const PLANEVELOCITY = 30
+    const POINTRATIO = 10
+    const VELOCITYRATIO = 10
     var totalPts = 0
     var attempts = 0
     var planesHit = 0
     var diffucultyLevel = 1
     var drawAllInterval, createPlaneInterval
+    
+     
     
     const PLANEIMAGES = {
         RED: "redplane",
@@ -49,7 +56,8 @@ var createApp = function(canvas) {
             ang = -90
         }
         context.rotate(ang*Math.PI/180);
-        context.drawImage(image,-CANNONDIMENSION/2,-CANNONDIMENSION/2,CANNONDIMENSION,CANNONDIMENSION);
+        context.drawImage(image,-CANNONDIMENSION/2,-CANNONDIMENSION/2,
+                          CANNONDIMENSION,CANNONDIMENSION)
 
         // we’re done with the rotating so restore the unrotated context
         context.restore();
@@ -94,7 +102,9 @@ var createApp = function(canvas) {
     function checkCollide(x, y){
         var pIdx = -1
         planes.forEach(function(plane, index){
-            if ((x - RADIUS >= plane.locX) && (x + RADIUS <= plane.locX + PLANEDIMENSION) && (y - RADIUS <= (CANNONDIMENSION + PLANEDIMENSION)) && (y >= CANNONDIMENSION)) {
+            if ((x - RADIUS >= plane.locX) && (x + RADIUS <= plane.locX + PLANEDIMENSION)
+                && (y - RADIUS <= (CANNONDIMENSION + PLANEDIMENSION)) 
+                && (y >= CANNONDIMENSION)) {
                 pIdx = index
                 updatePts(plane.point)
             }
@@ -137,7 +147,7 @@ var createApp = function(canvas) {
             locY: CANNONDIMENSION,
             velocityX: PLANEVELOCITY * diffucultyLevel,
             color: random,
-            point: random * 10
+            point: random * POINTRATIO
         }
         planes.push(plane)
     }
@@ -213,8 +223,8 @@ var createApp = function(canvas) {
     }, false);
     
     canvas.addEventListener('mousedown', function(evt){
-        var vX = Math.abs(evt.clientX - canvasWidth / 2) / 10
-        var vY = (floor - evt.clientY) / 10
+        var vX = Math.abs(evt.clientX - canvasWidth / 2) / VELOCITYRATIO
+        var vY = (floor - evt.clientY) / VELOCITYRATIO
         var sign = (evt.clientX > canvasWidth / 2) ? 1 : -1
         var cannonBall = {
             locX: canvasWidth / 2 + CANNONDIMENSION / 2,

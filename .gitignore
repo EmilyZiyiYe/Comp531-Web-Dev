@@ -4,3 +4,9 @@
 *.zip
 
 starter/
+
+*.log
+
+*.log
+
+inclass-13/npm-debug.log
