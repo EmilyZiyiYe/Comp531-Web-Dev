@@ -10,3 +10,7 @@ starter/
 *.log
 
 inclass-13/npm-debug.log
+
+inclass-16/package.json
+
+inclass-16/test.sh
