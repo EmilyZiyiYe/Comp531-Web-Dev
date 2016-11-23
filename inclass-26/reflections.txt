@@ -1,0 +1,17 @@
+What did you really enjoy learning about?
+
+Modern javascript, React.js, Node.js, MongoDB and all the new technology.
+
+What did not work well in the course and how might it be improved?
+
+For homework 5, there are too much stuff to start from scratch, especially for people who never learn 
+React and Redux before. So I think it would help to break down the hw5 into pieces of code in inclass
+homework, just like homework 6 and homework 7. So we can reuse the code we write in inclass homework
+to start on homework 5.
+
+What could I have done to help you more, presentation of material, design of in class
+exercises, goals of projects – and be specific please!
+
+1. Since there are so many topics and stuff to be covered in this class, it would be nice to have a review
+and summary doc at the end of the semester even though we don't have tests for this class.
+2. Extra office hour in weekend definitely would help a lot, maybe not every week but every two weeks.
